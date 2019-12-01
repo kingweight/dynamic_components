@@ -1,4 +1,11 @@
-import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core'
+import {
+  Component,
+  ComponentFactoryResolver,
+  ComponentRef,
+  OnDestroy,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core'
 
 import { ComponentA } from './component-a/component-a.component'
 import { ComponentB } from './component-b/component-b.component'
@@ -8,8 +15,11 @@ import { ComponentB } from './component-b/component-b.component'
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+    
     title = 'dynamic component';
+
+    componentList:[ComponentRef<any>];
 
     @ViewChild('container', { read: ViewContainerRef,static:false }) container: ViewContainerRef;
 
@@ -41,6 +51,18 @@ export class AppComponent {
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
         // add the component to the view
         const componentRef = this.container.createComponent(componentFactory);
+        this.componentList.push(componentRef);
     }
 
+    removeComponent(selectedValue){
+
+    }
+
+    ngOnDestroy(): void {
+        if(this.componentList){
+            this.componentList.forEach(componentRef=>{
+                componentRef.destroy();
+            })
+        }
+    }
 }
