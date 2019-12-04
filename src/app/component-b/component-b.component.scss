@@ -1,0 +1,10 @@
+::ng-deep app-component-b>mat-card {
+    margin: 15px 40px;
+}
+
+::ng-deep app-component-b>mat-card>mat-card-actions {
+    text-align: right;
+}
+::ng-deep app-component-b > mat-card{
+    background-color: antiquewhite!important;;
+}

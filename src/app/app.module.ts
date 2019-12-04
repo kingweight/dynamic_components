@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material'
 import { MatSelectModule } from '@angular/material/select'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -21,6 +22,7 @@ import { ComponentB } from './component-b/component-b.component'
   ],
   imports: [
     //FlexLayoutModule,
+    MatCardModule,
     FormsModule,
     BrowserAnimationsModule,
     MatSelectModule,

@@ -19,9 +19,9 @@ export class AppComponent implements OnDestroy {
     
     title = 'dynamic component';
 
-    componentList:[ComponentRef<any>];
+    componentList = new Array<ComponentRef<any>>();
 
-    @ViewChild('container', { read: ViewContainerRef,static:false }) container: ViewContainerRef;
+    @ViewChild('container', { read: ViewContainerRef,static:true }) viewContainerRef: ViewContainerRef;
 
     selectedValue: string;
     selectedCar: string;
@@ -41,21 +41,24 @@ export class AppComponent implements OnDestroy {
     addComponent(selectedValue = 0) {
         let component:any;
         if(selectedValue == 0){
-            component = ComponentA;
-            console.log("add component A");
+            const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentA);
+            // add the component to the view
+            const componentRef = this.viewContainerRef.createComponent(componentFactory);
+            (<ComponentA>componentRef.instance).action.subscribe(()=>componentRef.destroy());
+            this.componentList.push(componentRef);
         }else if(selectedValue == 1){
-            component = ComponentB;
-            console.log("add component B");
+            const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentB);
+            // add the component to the view
+            const componentRef = this.viewContainerRef.createComponent(componentFactory);
+            (<ComponentB>componentRef.instance).action.subscribe(()=>componentRef.destroy());
+            this.componentList.push(componentRef);
         }
-
-        const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
-        // add the component to the view
-        const componentRef = this.container.createComponent(componentFactory);
-        this.componentList.push(componentRef);
+        
     }
 
-    removeComponent(selectedValue){
 
+    clearComponents(){
+        this.viewContainerRef.clear();
     }
 
     ngOnDestroy(): void {
