@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output, Input,ChangeDetectorRef } from '@angular/core'
 
 @Component({
     selector: 'app-component-a',
@@ -7,7 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 })
 export class ComponentA implements OnInit {
 
-    constructor() {}
+    constructor(public changeDetectorRef:ChangeDetectorRef) {}
+
+    @Input() name = "I'm Component A"
 
     @Output() action = new EventEmitter();
 

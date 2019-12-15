@@ -5,6 +5,7 @@ import {
   OnDestroy,
   ViewChild,
   ViewContainerRef,
+  AfterViewInit,
 } from '@angular/core'
 
 import { ComponentA } from './component-a/component-a.component'
@@ -15,7 +16,7 @@ import { ComponentB } from './component-b/component-b.component'
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy,AfterViewInit {
     
     title = 'dynamic component';
 
@@ -36,15 +37,24 @@ export class AppComponent implements OnDestroy {
         }
     ];
 
-    constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
+    constructor(private componentFactoryResolver: ComponentFactoryResolver) {
+        
+    }
 
-    addComponent(selectedValue = 0) {
+    ngAfterViewInit(): void {
+        // for(let i = 0; i< 1000; i++)
+        //     this.addComponent(0)
+    }
+
+    addComponent(selectedValue) {
         let component:any;
         if(selectedValue == 0){
             const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentA);
             // add the component to the view
             const componentRef = this.viewContainerRef.createComponent(componentFactory);
+            (<ComponentA>componentRef.instance).changeDetectorRef.detectChanges();
             (<ComponentA>componentRef.instance).action.subscribe(()=>componentRef.destroy());
+            (<ComponentA>componentRef.instance).name = "I'm Component A"
             this.componentList.push(componentRef);
         }else if(selectedValue == 1){
             const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentB);
@@ -56,6 +66,9 @@ export class AppComponent implements OnDestroy {
         
     }
 
+    action(){
+
+    }
 
     clearComponents(){
         this.viewContainerRef.clear();

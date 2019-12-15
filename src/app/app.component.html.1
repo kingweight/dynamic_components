@@ -1,0 +1,1392 @@
+<div class="center">
+    <div style="padding-top: 40px;">
+        <mat-form-field class="w80">
+            <mat-label>Select a component</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="food">
+                <mat-option *ngFor="let component of components" [value]="component.value">
+                    {{component.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div style="padding-top: 40px;">
+        <button class="w80 h40" mat-raised-button color="primary" (click)="addComponent(selectedValue)">Dynamically Add Component</button>
+    </div>
+    <div style="padding-top: 20px;">
+        <button class="w80 h40" mat-raised-button (click)="clearComponents()">Clear All Components</button>
+    </div>
+</div>
+<!-- <app-mytext></app-mytext> -->
+<div>
+    <div #container></div>
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+    <div>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+        <app-component-a (action)="action()" [name]="'I am Component A'"></app-component-a>
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- <app-header></app-header>
+
+    <app-breadcrumb></app-breadcrumb>
+
+    <form action="/REST/someAPI" method="POST">
+
+        <app-input [validators]="validators"></app-input>
+        <app-button (click)="submitForm($event)"></app-button>
+
+    </form>
+
+    <app-bottom-menu></app-bottom-menu>
+    
+<app-footer></app-footer> -->
+
+<!-- <div *ngSwitch="component.type">
+
+    <app-profile *ngSwitchCase="profile" [data]="component.data">
+    </app-profile>
+
+    <app-card *ngSwitchCase="card" [data]="component.data">
+    </app-card>
+
+    <app-input *ngSwitchCase="input" [data]="component.data">
+    </app-input>
+
+    <app-button *ngSwitchCase="button" [data]="component.data">
+    </app-button>
+    ...
+    ...
+    ...
+
+</div> -->

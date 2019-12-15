@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core'
+import { asyncScheduler, asapScheduler, animationFrameScheduler, queueScheduler } from 'rxjs'
 
 @Component({
     selector: 'app-component-b',
